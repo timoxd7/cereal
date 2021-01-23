@@ -389,6 +389,7 @@ struct CarParams {
     pid @26 :LateralPIDTuning;
     indi @27 :LateralINDITuning;
     lqr @40 :LateralLQRTuning;
+    craycray @55 :LateralCrayCrayTuning;
   }
 
   steerLimitAlert @28 :Bool;
@@ -467,6 +468,10 @@ struct CarParams {
 
     k @6 :List(Float32);  # LQR gain
     l @7 :List(Float32);  # Kalman gain
+  }
+  
+  struct LateralCrayCrayTuning {
+    cray @0 :Float32;
   }
 
   enum SafetyModel {
